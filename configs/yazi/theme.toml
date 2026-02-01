@@ -1,0 +1,119 @@
+# A white and black theme for Yazi file manager
+# Save to ~/.config/yazi/theme.toml
+
+[manager]
+cwd = { fg = "white" }
+
+# Hovered
+hovered         = { fg = "black", bg = "white" }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "white", italic = true }
+find_position = { fg = "white", bg = "reset", italic = true }
+
+# Marker
+marker_selected = { fg = "white", bg = "white" }
+marker_copied   = { fg = "white", bg = "white" }
+marker_cut      = { fg = "gray", bg = "gray" }
+
+# Tab
+tab_active   = { fg = "black", bg = "white", bold = true }
+tab_inactive = { fg = "white", bg = "reset" }
+tab_width    = 1
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "white" }
+
+# Highlighting
+syntect_theme = ""
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "white", bg = "white" }
+
+# Mode
+mode_normal = { fg = "black", bg = "white", bold = true }
+mode_select = { fg = "black", bg = "white", bold = true }
+mode_unset  = { fg = "black", bg = "white", bold = true }
+
+# Progress
+progress_label  = { fg = "white", bold = true }
+progress_normal = { fg = "white", bg = "reset" }
+progress_error  = { fg = "white", bg = "reset" }
+
+# Permissions
+permissions_t = { fg = "white" }
+permissions_r = { fg = "white" }
+permissions_w = { fg = "white" }
+permissions_x = { fg = "white" }
+permissions_s = { fg = "gray" }
+
+[select]
+border   = { fg = "white" }
+active   = { fg = "black", bg = "white" }
+inactive = { fg = "white" }
+
+[input]
+border   = { fg = "white" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[completion]
+border   = { fg = "white" }
+active   = { bg = "reset", fg = "white", bold = true }
+inactive = {}
+
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
+[tasks]
+border  = { fg = "white" }
+title   = {}
+hovered = { underline = true }
+
+[which]
+mask            = { bg = "black" }
+cand            = { fg = "white" }
+rest            = { fg = "darkgray" }
+desc            = { fg = "white" }
+separator       = "  "
+separator_style = { fg = "white" }
+
+[help]
+on      = { fg = "white" }
+exec    = { fg = "white" }
+desc    = { fg = "gray" }
+hovered = { bg = "reset", fg = "white", bold = true }
+footer  = { fg = "darkgray", bg = "black" }
+
+[filetype]
+
+rules = [
+	# Images
+	{ mime = "image/*", fg = "white" },
+	
+	# Videos
+	{ mime = "video/*", fg = "white" },
+	{ mime = "audio/*", fg = "white" },
+	
+	# Archives
+	{ mime = "application/zip",             fg = "white" },
+	{ mime = "application/gzip",            fg = "white" },
+	{ mime = "application/x-tar",           fg = "white" },
+	{ mime = "application/x-bzip",          fg = "white" },
+	{ mime = "application/x-bzip2",         fg = "white" },
+	{ mime = "application/x-7z-compressed", fg = "white" },
+	{ mime = "application/x-rar",           fg = "white" },
+	
+	# Documents
+	{ mime = "application/pdf", fg = "white" },
+	
+	# Fallback
+	{ name = "*", fg = "white" },
+	{ name = "*/", fg = "white", bold = true }
+]

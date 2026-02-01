@@ -1,0 +1,100 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  "spacing": 0,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "hyprland/window"
+  ],
+
+   "modules-right": [
+    "mpris", 
+    "custom/separator",
+    "tray",
+    "battery",
+    "custom/separator",
+    "wireplumber",
+    "custom/separator",
+    "network",
+    "custom/separator",
+    "cpu",
+    "custom/separator",
+    "memory",
+    "custom/separator",
+    "clock"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+    "all-outputs": true
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50,
+    "separate-outputs": false   // ← FIX
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "tooltip": false
+  },
+
+  "battery": {
+    "format": "BAT {capacity}%",
+    "tooltip": false
+  },
+
+  "wireplumber": {
+    "format": "VOL {volume}%",
+    "tooltip": false
+  },
+
+  "network": {
+    "format": "{ipaddr}",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 6
+  },
+  
+  "cpu": {
+    "format": "CPU {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "RAM {used}G",
+    "tooltip": false
+  },
+  "gpu": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "interval": 3,
+    "format": "GPU {}%",
+    "tooltip": false
+  },
+
+  "mpris": {
+    "format": "{title}⏵",
+    "format-paused": "{title}⏸",
+    "format-stopped": "",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  }
+
+
+}
+
