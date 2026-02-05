@@ -1,100 +1,124 @@
 {
-  "layer": "top",
-  "position": "top",
-  "height": 20,
-  "spacing": 0,
+  "layer": "bottom",
+  "position": "up",
+  "height": 30,
+  "reload_style_on_change": true,
+  "modules-left": [ "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [ "memory", "battery", "pulseaudio", "cpu","tray" ],
 
-  "modules-left": [
-    "hyprland/workspaces"
-  ],
+"network": {
+    "interface": "wlp0s20f3",
+    "format": "{ifname}",
+    "format-wifi": "{essid}",
+    "format-disconnected": " - ",
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "{essid}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+},
 
-  "modules-center": [
-    "hyprland/window"
-  ],
+"pulseaudio": {
+    "format": "VOL: {volume}%",
+    "format-bluetooth": "HP:{volume}%",
+    "format-muted": "MT",
+    "format-icons": {
+        "headphone": "hp",
+        "hands-free": "hf",
+        "headset": "hs",
+        "phone": "ph",
+        "portable": "pr",
+        "car": "cr",
+        "default": ["", "", "", ""], 
+        "ignored-sinks": ["Easy Effects Sink"]
+        },
+    "scroll-step": 5.0,
+    "on-click": "pavucontrol -t 3",
+	"tooltip-format": "{icon} {desc} | {volume}%",
+    "smooth-scrolling-threshold": 1
+},
 
-   "modules-right": [
-    "mpris", 
-    "custom/separator",
-    "tray",
-    "battery",
-    "custom/separator",
-    "wireplumber",
-    "custom/separator",
-    "network",
-    "custom/separator",
-    "cpu",
-    "custom/separator",
-    "memory",
-    "custom/separator",
-    "clock"
-  ],
+"battery": {
+    "bat":"BAT0",
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "+{capacity}%",
+    "format-plugged": "B:{capacity}%",
+    "format-alt": "B:{time} ",
+    "format-icons": ["▁", "▃", "▄", "▆", "█"]
+},
 
-  "hyprland/workspaces": {
-    "format": "{id}",
+"hyprland/language": { "format-en": "US", "format-ru": "RU" },
+
+"hyprland/workspaces": {
+    "format": "{icon}",
     "on-click": "activate",
-    "all-outputs": true
-  },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "all-outputs": true,
+    "active-only": false,
+    "show-special": false,
+    "persistent-only": false,
+    "persistent-workspaces": { "*" : [1, 2, 3, 4, 5, 6, 7, 8] },
+},
+   
+"hyprland/window": {
+    "format": "{title}",
+    "max-length": 80,
+    "separate-outputs": true
+},
 
-  "hyprland/window": {
-    "format": "{}",
-    "max-length": 50,
-    "separate-outputs": false   // ← FIX
-  },
+"cpu": {
+    "interval": 2,
+    "format": "CPU: {usage}%",
+},
 
-  "custom/separator": {
-    "format": "|",
-    "tooltip": false
-  },
+"power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+        "default": "def",
+        "performance": "perf",
+        "balanced": "norm",
+        "power-saver": "save"
+    }
+},
 
-  "clock": {
-    "format": "{:%I:%M %p}",
-    "tooltip": false
-  },
+"clock": {
+    "format-alt": "{:%a}-{:%d} | {:%I}:{:%M}",
+    "format": "{:%a-%d | %I:%M}",
+    "timezones": [ "Asia/Novosibirsk" ],
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "on-scroll": 1,
+        "format": {
+            "months": "<span color='#a6e3a1'><b>{}</b></span>",
+            "days": "<span color='#cdd6f4'>{}</span>",
+            "weeks": "<span color='#74c7ec'><b>W{}</b></span>",
+            "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+            "today": "<span background='#f38ba8' color='#1e1e2e'><b>{}</b></span>"
+        }
+    },
+    "actions": {
+        "on-click": "tz_up",
+        "on-click-right": "tz_down",
+        "on-click-forward": "shift_up",
+        "on-click-backward": "shift_down",
+        "on-click-middle": "mode",
+    }
+},
 
-  "battery": {
-    "format": "BAT {capacity}%",
-    "tooltip": false
-  },
-
-  "wireplumber": {
-    "format": "VOL {volume}%",
-    "tooltip": false
-  },
-
-  "network": {
-    "format": "{ipaddr}",
-    "tooltip": false
-  },
-
-  "tray": {
-    "icon-size": 14,
-    "spacing": 6
-  },
-  
-  "cpu": {
-    "format": "CPU {usage}%",
-    "tooltip": false
-  },
-  "memory": {
-    "format": "RAM {used}G",
-    "tooltip": false
-  },
-  "gpu": {
-    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "interval": 3,
-    "format": "GPU {}%",
-    "tooltip": false
-  },
-
-  "mpris": {
-    "format": "{title}⏵",
-    "format-paused": "{title}⏸",
-    "format-stopped": "",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
-  }
-
-
+"memory": {
+    "interval": 5,
+    "format": "MEM: {used:0.1f}G",
+    "format-alt-click": "click",
+}
 }
 

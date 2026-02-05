@@ -12,7 +12,7 @@
 
 .notification {
   background: #000000;
-  border: 2px solid #FE4459;
+  border: 2px solid #FFFFFF;
   border-radius: 8px;
   margin: 8px;
   padding: 12px;
@@ -25,7 +25,7 @@
 }
 
 .summary {
-  color: #FE4459;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 16px;
 }
@@ -37,7 +37,7 @@
 
 .control-center {
   background: #000000;
-  border: 2px solid #FE4459;
+  border: 2px solid #FFFFFF;
   border-radius: 12px;
   margin: 8px;
   padding: 12px;
@@ -49,7 +49,7 @@
 
 .control-center .notification {
   background: #000000;
-  border: 1px solid #FE4459;
+  border: 1px solid #FFFFFF;
 }
 
 .notification-default-action:hover,
@@ -63,7 +63,7 @@
 }
 
 .close-button {
-  background: #FE4459;
+  background: #FFFFFF;
   color: #000000;
   border-radius: 4px;
   margin: 4px;
@@ -71,20 +71,20 @@
 }
 
 .close-button:hover {
-  background: #FE4459;
+  background: #FFFFFF;
 }
 
 .notification-action {
   background: #000000;
-  border: 1px solid #FE4459;
-  color: #FE4459;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
   border-radius: 4px;
   margin: 4px;
   padding: 6px 12px;
 }
 
 .widget-title {
-  color: #FE4459;
+  color: #FFFFFF;
   font-size: 18px;
   font-weight: bold;
   margin: 12px;
@@ -92,7 +92,7 @@
 
 .widget-dnd {
   background: #000000;
-  border: 1px solid #FE4459;
+  border: 1px solid #FFFFFF;
   border-radius: 8px;
   margin: 8px;
   padding: 8px;
@@ -100,22 +100,22 @@
 
 .widget-dnd > switch {
   background: #000000;
-  border: 1px solid #FE4459;
+  border: 1px solid #FFFFFF;
   border-radius: 4px;
 }
 
 .widget-dnd > switch:checked {
-  background: #FE4459;
+  background: #FFFFFF;
 }
 
 .widget-label {
-  color: #FE4459;
+  color: #FFFFFF;
   margin: 8px;
 }
 
 .widget-mpris {
   background: #000000;
-  border: 1px solid #FE4459;
+  border: 1px solid #FFFFFF;
   border-radius: 8px;
   margin: 8px;
   padding: 8px;
@@ -127,7 +127,7 @@
 }
 
 .widget-mpris-title {
-  color: #FE4459;
+  color: #FFFFFF;
   font-weight: bold;
 }
 
@@ -137,8 +137,8 @@
 
 button {
   background: #000000;
-  border: 1px solid FE4459;
-  color: FE4459;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
   border-radius: 4px;
   padding: 8px 16px;
   margin: 4px;
@@ -156,15 +156,15 @@ progressbar,
 progress,
 trough {
   background: #000000;
-  border: 1px solid #FE4459;
+  border: 1px solid #FFFFFF;
   border-radius: 4px;
 }
 
 progressbar progress {
-  background: #FE4459;
+  background: #FFFFFF;
 }
 
 slider {
-  background: #FE4459;
+  background: #FFFFFF;
   border-radius: 50%;
 }

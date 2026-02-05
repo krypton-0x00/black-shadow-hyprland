@@ -1,80 +1,48 @@
+@import "colors.css";
+#backlight, #battery, #cpu, #clock, #memory, #network, #workspaces,
+#language, #battery, #power-profiles-daemon, #pulseaudio {
+  background: @transparent;
+  color: #ffffff;
+  border-radius: 0;
+  margin-top: 1;
+  margin-right: 4;
+  margin-left: 4;
+  padding: 0px 20px 0px 20px;
+  /* border: 1px solid @color1; */
+  /* border-bottom: 2px solid @color1; */
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "JetBrains Mono Nerd Font";
-  font-size: 11px;
-  font-weight: normal;
+  font-family: "Jetbrains mono Medium";
+  font-size: 18px;
 }
 
-#tray {
-  padding: 0 6px;
-  background: transparent;
-}
+#waybar { background: rgba(1, 1, 1, 1); }
+/* #waybar { background: transparent; } */
+#workspaces { padding: 1px 1px 1px 1px; }
 
-#mpris {
-  padding: 0 8px;
-  margin: 0 5px;
-  /* background: rgba(255, 0, 0, 0.15); */
-  color: #ffffff;
-  font-weight: 500;
-}
-
-#mpris.paused {
-  opacity: 0.6;
-}
-
-#mpris.playing {
-  color: #ffffff;
-}
-
-
-#waybar {
-  background: #000000;
-}
-
-label {
-  background: transparent;
-}
-
-#workspaces {
-  color: #000000;
-  background: transparent;
-}
+.modules-left, .modules-right { border-radius: 2; }
+.modules-left                 { margin-left: 8;   }
+.modules-right                { margin-right: 8;  }
 
 #workspaces button {
-  padding: 0 6px;
-  margin: 0 2px 0 0;
-  min-width: 0;
-  background: #333333;
-  color: #ffffff;
-  border: none;
+  font-size: 5px;
+  padding: 0px 6px 0px 6px;
+  margin: 0px; 
   border-radius: 0;
-  box-shadow: none;
-  outline: none;
-  text-shadow: none;
+}
+
+#workspaces button.focused { 
+  background-color: @color1; 
+  color: #ffffff;
 }
 
 #workspaces button.active {
-  background: #ffffff;
-  color: #000000;
-  border: none;
-  box-shadow: none;
-  outline: none;
-  text-shadow: none;
+  background-color: @color1; 
+  color: #000000; 
 }
 
-#workspaces button:hover {
-  background: #ffffff;
-  color: #000000;
-}
+#workspaces button.persistent { color: #ffffff; }
+#workspaces button.empty      { color: #787878; }
+#workspaces button.visible    { color: #000000; }
 
-#window,
-#battery,
-#network,
-#wireplumber,
-#clock,
-#custom-separator {
-  padding: 0 6px;
-  background: transparent;
-  color: #ffffff;
-}
