@@ -9,7 +9,7 @@
     "name": "Untitled",
     "sources": [
         {
-            "prev_ver": 536870914,
+            "prev_ver": 536870916,
             "name": "Scene",
             "uuid": "1504f31e-e82f-4b99-a595-f3d90dfc821a",
             "id": "scene",
@@ -155,7 +155,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536870914,
+            "prev_ver": 536870916,
             "name": "Screen Capture (PipeWire)",
             "uuid": "264e9dcd-80c4-4861-8e24-5e043b965699",
             "id": "pipewire-screen-capture-source",
@@ -181,7 +181,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536870914,
+            "prev_ver": 536870916,
             "name": "Audio Capture Device (ALSA)",
             "uuid": "9e074e53-b929-47ce-8c48-669387d08d41",
             "id": "alsa_input_capture",
@@ -210,7 +210,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 536870914,
+                    "prev_ver": 536870916,
                     "name": "Noise Suppression",
                     "uuid": "423b1de3-94dd-4567-bcbe-b3297cf45c9e",
                     "id": "noise_suppress_filter",
@@ -234,7 +234,7 @@
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 536870914,
+                    "prev_ver": 536870916,
                     "name": "Compressor",
                     "uuid": "213fe98a-274a-4c49-9abd-7d558faac557",
                     "id": "compressor_filter",
@@ -260,7 +260,7 @@
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 536870914,
+                    "prev_ver": 536870916,
                     "name": "3-Band Equalizer",
                     "uuid": "7d428266-d9c9-4558-8dbe-8cf283b2db6a",
                     "id": "basic_eq_filter",
@@ -286,7 +286,7 @@
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 536870914,
+                    "prev_ver": 536870916,
                     "name": "Limiter",
                     "uuid": "d4d056da-05b2-4712-a082-4ec566bf6b26",
                     "id": "limiter_filter",
@@ -343,7 +343,7 @@
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -7,
+    "scaling_level": -12,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {

@@ -5,7 +5,17 @@
   "reload_style_on_change": true,
   "modules-left": [ "hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": [ "memory", "battery", "pulseaudio", "cpu","tray" ],
+  "modules-right": [ 
+    "memory",
+    "custom/separator",
+    "battery",
+    "custom/separator",
+    "pulseaudio",
+    "custom/separator",
+    "cpu",
+    "custom/separator",
+    "tray"
+  ],
 
 "network": {
     "interface": "wlp0s20f3",
@@ -39,7 +49,7 @@
 },
 
 "battery": {
-    "bat":"BAT0",
+    "bat":"BAT1",
     "states": {
         "good": 95,
         "warning": 30,
@@ -92,7 +102,7 @@
 "clock": {
     "format-alt": "{:%a}-{:%d} | {:%I}:{:%M}",
     "format": "{:%a-%d | %I:%M}",
-    "timezones": [ "Asia/Novosibirsk" ],
+    "timezones": [ "Asia/Kolkata" ],
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
         "mode": "month",
@@ -113,6 +123,11 @@
         "on-click-backward": "shift_down",
         "on-click-middle": "mode",
     }
+},
+
+"custom/separator": {
+    "format": "|",
+    "tooltip": false
 },
 
 "memory": {
