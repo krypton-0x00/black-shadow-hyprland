@@ -1,8 +1,0 @@
-colors:
-  user: red
-  group: white
-  links: red
-  read: red
-  write: red
-  exec: bright_red
-  dir: bright_red
