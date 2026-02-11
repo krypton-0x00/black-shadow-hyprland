@@ -1,8 +1,8 @@
-@define-color foreground #d4be98;
-@define-color foreground #ADD8E6;
 @define-color foreground #ffffff;
 @define-color background #000000;
-@define-color color1 #ADD8E6;
-@define-color color1 #FFFFFF;
+
+@define-color color1 #ffffff;
 @define-color color2 #000000;
+
+@define-color transparent rgba(0,0,0,0);
 

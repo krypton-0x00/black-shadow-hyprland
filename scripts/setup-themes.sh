@@ -8,8 +8,9 @@ mkdir -p ~/.icons
 echo "[+] Installing extraction tools"
 sudo pacman -S --noconfirm p7zip
 
-echo "[+] Extracting theme"
-7z x ~/black-shadow-hyprland/themes/Midnight-Red.7z -o"$HOME/.themes"
+echo "[+] Setting GTK theme"
+# 7z x ~/black-shadow-hyprland/themes/Midnight-Red.7z -o"$HOME/.themes"
+ln -sf ~/black-shadow-hyprland/themes/Black-n-White-GTK/ ~/.themes/
 
 echo "[+] Extracting icons"
 tar -xf ~/black-shadow-hyprland/themes/ColorFlow.tar.xz -C ~/.icons
