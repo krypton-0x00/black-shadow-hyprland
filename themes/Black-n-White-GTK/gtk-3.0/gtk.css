@@ -2,8 +2,9 @@
 @define-color base_color #000000;
 @define-color bg_color #000000;
 @define-color tooltip_bg_color #ffffff;
-@define-color selected_bg_color #ffffff;
-@define-color selected_fg_color #000000;
+@define-color selected_bg_color #326482;
+@define-color selected_fg_color #ffffff;
+
 @define-color text_color #ffffff;
 @define-color fg_color #ffffff;
 @define-color tooltip_fg_color #000000;
@@ -153,6 +154,54 @@
 @define-color wm_button_bg_active_a shade (@bg_color, 0.7);
 @define-color wm_button_bg_active_b shade (@bg_color, 0.9);
 @define-color wm_button_bg_active_c shade (@bg_color, 0.9);
+
+
+/* ===== SELECTION VISIBILITY FIX ===== */
+
+selection {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+entry selection {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+.view:selected,
+.iconview:selected,
+row:selected {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+/* Search bar highlight fix */
+entry {
+    caret-color: #ffffff;
+}
+
+entry:selected {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+
+/* ===== NM-APPLET / GTK MENU FIX ===== */
+
+menu,
+.popup,
+.context-menu,
+.csd menu,
+popover {
+    background-color: #000f14 !important;
+    color: #a0a0b4 !important;
+    border: 1px solid #326482 !important;
+}
+
+menuitem:hover {
+    background-color: #326482 !important;
+    color: #ffffff !important;
+}
 
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");
