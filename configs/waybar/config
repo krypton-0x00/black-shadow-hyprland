@@ -8,6 +8,8 @@
   "modules-right": [ 
     "memory",
     "custom/separator",
+    "disk",
+    "custom/separator",
     "battery",
     "custom/separator",
     "pulseaudio",
@@ -26,6 +28,14 @@
     "tooltip-format-wifi": "{essid}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
+},
+
+"disk": {
+    "interval": 30,
+    "format": "{free}",
+    "path": "/",
+    "tooltip": true,
+    "tooltip-format": "Free: {free}\nUsed: {used}\nTotal: {total}"
 },
 
 "pulseaudio": {
