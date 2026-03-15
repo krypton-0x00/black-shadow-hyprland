@@ -4,7 +4,7 @@
   "height": 30,
   "reload_style_on_change": true,
   "modules-left": [ "hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "modules-center": ["clock", "custom/hijri"],
   "modules-right": [ 
     "memory",
     "custom/separator",
@@ -28,6 +28,11 @@
     "tooltip-format-wifi": "{essid}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
+},
+"custom/hijri": {
+    "exec": "~/.config/waybar/scripts/hijri.sh",
+    "interval": 3600,
+    "format": " {}"
 },
 
 "disk": {
