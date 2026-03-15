@@ -190,7 +190,7 @@
             "mixers": 255,
             "sync": 0,
             "flags": 0,
-            "volume": 0.31662794947624207,
+            "volume": 0.5684049129486084,
             "balance": 0.5,
             "enabled": true,
             "muted": false,
@@ -343,7 +343,7 @@
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -12,
+    "scaling_level": -7,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {
