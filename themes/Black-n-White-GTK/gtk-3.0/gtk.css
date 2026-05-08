@@ -45,7 +45,7 @@
 @define-color keyboard_focus_border_b #ffffff;
 
 @define-color os_chrome_bg_color #000000;
-@define-color os_chrome_fg_color #272727;
+@define-color os_chrome_fg_color #ffffff;
 @define-color os_chrome_selected_bg_color #ffffff;
 @define-color os_chrome_selected_fg_color #000000;
 
@@ -56,14 +56,14 @@
 @define-color focused_entry_inset alpha (#c4c4c4, 0.50);
 
 @define-color button_gradient_color_a #000000;
-@define-color button_gradient_color_b #000000;
+@define-color button_gradient_color_b #111111;
 @define-color button_border #ffffff;
 
-/*@define-color button_active_gradient_color_a (@button_gradient_color_b, 0.80);*/
-@define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.83);
+@define-color button_active_gradient_color_a #444444;
+@define-color button_active_gradient_color_b #555555;
 
-@define-color button_hover_gradient_color_a @theme_base_color;
-@define-color button_hover_gradient_color_b shade (@button_gradient_color_a, 0.94);
+@define-color button_hover_gradient_color_a #222222;
+@define-color button_hover_gradient_color_b #2a2a2a;
 
 @define-color button_raised_gradient_color_a @button_gradient_color_a;
 @define-color button_raised_gradient_color_b @button_gradient_color_b;
@@ -202,6 +202,38 @@ menuitem:hover {
     background-color: #326482 !important;
     color: #ffffff !important;
 }
+
+/* ===== GLOBAL HOVER FIX ===== */
+
+button:hover,
+button:checked,
+button:active,
+.modelbutton:hover,
+.modelbutton:selected,
+menuitem:hover,
+menuitem:focus,
+row:hover,
+row:selected,
+.sidebar row:hover,
+.sidebar row:selected {
+    background-image: none;
+    background-color: #222222 !important;
+    color: #ffffff !important;
+    border-color: #666666 !important;
+}
+
+/* Better menu spacing */
+menuitem {
+    padding: 6px 10px;
+    margin: 2px;
+}
+
+/* Entry focus */
+entry:focus {
+    border-color: #326482;
+    box-shadow: none;
+}
+
 
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");
